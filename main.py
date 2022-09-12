@@ -1,17 +1,16 @@
 import googlemaps
 from datetime import datetime
-
+    
+            #INPUT
 first_address = input("Enter First Location: ")
 second_address = input("Enter Second Location: ")
 select_mode = input("Enter the mode..\noptions(driving,walking,bicycling,transit): ")
-
-gmaps = googlemaps.Client(key='YOUR API KEY')
-
 now = datetime.now()
 
-# Geocoding an adress
-# Geocode convert address to coordinates
+            #API
+gmaps = googlemaps.Client(key='YOUR API KEY')
 
+            #CONVERT ADDRESS TO COORDINATE
 geocode1 = gmaps.geocode(first_address)
 geocode2 = gmaps.geocode(second_address)
 
