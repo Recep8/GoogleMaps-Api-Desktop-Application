@@ -6,7 +6,7 @@ def my_function(first_address,second_address):
 
     # API
     gmaps = googlemaps.Client(key='Your API Key')
-    print(first_address)
+
     # CONVERT ADDRESS TO COORDINATE
     geocode1 = gmaps.geocode(first_address)
     geocode2 = gmaps.geocode(second_address)
