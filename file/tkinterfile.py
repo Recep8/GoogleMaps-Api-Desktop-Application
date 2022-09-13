@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
+from locationfile import my_function
+
 
 class App(tk.Tk):
     def __init__(self):
@@ -41,11 +43,10 @@ class App(tk.Tk):
         #Output label
         self.output_label = ttk.Label(self)
         self.output_label.grid(column=0, row=2, columnspan=3, **padding)
-        self.address1_var.get()
-        self.address2_var.get()
+
 
     def submit(self):
-        self.output_label.config(text=self.address1_var.get()+self.address2_var.get())
+        self.output_label.config(text=my_function(self.address1_var.get(),self.address2_var.get()))
 
 
 if __name__ == "__main__":
